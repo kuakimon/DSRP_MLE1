@@ -210,11 +210,11 @@ LightGBM fue seleccionado debido a:
 
 Las variables más influyentes identificadas por LightGBM fueron:
 
-1. TODO
-2. TODO
-3. TODO
-4. TODO
-5. TODO
+1. chlorides
+2. total sulfur dioxide
+3. density
+4. pH
+5. volatile acidity
 
 ### SHAP Analysis
 
@@ -232,19 +232,11 @@ El análisis SHAP permitió:
 
 | Métrica | Valor |
 | ------- | ----- |
-| RMSE    | TODO  |
-| MAE     | TODO  |
-| R²      | TODO  |
+| RMSE    | 0.58  |
+| MAE     | 0.44  |
+| R²      | 0.49  |
 
 ### Métricas Online
-
-| Métrica              | Valor |
-| -------------------- | ----- |
-| Latencia promedio    | TODO  |
-| Tiempo de inferencia | TODO  |
-| Throughput           | TODO  |
-
-Si no existe despliegue productivo:
 
 > No se realizaron pruebas online. El proyecto fue evaluado únicamente mediante métricas offline.
 
@@ -262,16 +254,16 @@ cd DSRP_MLE1
 uv sync
 ```
 
-### Entrenamiento
-
-```bash
-uv run python src/models/train.py
-```
-
 ### EDA
 
 ```bash
 uv run python src/visualizations/generate_eda_notebook.py
+```
+
+### Entrenamiento
+
+```bash
+uv run python src/model/train.py
 ```
 
 ---
